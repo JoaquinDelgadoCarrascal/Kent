@@ -1,0 +1,14 @@
+[
+    {
+        "username": "test",
+        "salt": "b6c702980e9ee910b703a5a322c6700e",
+        "hashed_password": "02649d4ad0eb361a608eec5bce9655079e56a8a7f9ada18de18a66c9506f67ac",
+        "profile_info": "a"
+    },
+    {
+        "username": "test2",
+        "salt": "0ee274af35d669fdbfe30e22073f5ae5",
+        "hashed_password": "da498197949d8d0b807e4f039297a37034847c50f70b421e2e3c22c97de20952",
+        "profile_info": "test@gmail.com"
+    }
+]
