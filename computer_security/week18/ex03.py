@@ -1,6 +1,7 @@
 import os
 import hashlib
 from ex02 import xor_encrypt_decrypt
+
 """This attack assumes Eve has the session key K_AB and Message 3 from a previous session,
 and that Bob hasn't changed his secret key with the server (K_BS)."""
 

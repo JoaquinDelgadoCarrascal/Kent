@@ -47,9 +47,9 @@ def alice_send_message(recipient, amount):
 # Function to simulate Bob receiving and verifying the message
 def bob_receive_message(original_message, tampered_message):
     if verify_hmac(original_message, tampered_message):
-        return "Message from Alice: Authentic and Not Tampered"
+        return "Message from Alice: authentic message"
     else:
-        return "Message from Alice: Tampered or Authenticity cannot be ensured"
+        return "Message from Alice: message may be tampered or authenticity cannot be ensured"
 
 def main():
     # Alice sends a message to Bob
@@ -70,13 +70,13 @@ def main():
 
     # Simulate the server's HMAC verification process
     if verify_hmac(original_message, received_message):
-        print("\nHMAC Verification Successful: Message is Authentic and Not Tampered")
+        print("\nHMAC verification successful: authentic message")
     else:
-        print("\nHMAC Verification Failed: Message may be Tampered or Authenticity cannot be ensured")
+        print("\nHMAC verification failed: message may be tampered or authenticity cannot be ensured")
 
     # Bob receives and verifies the tampered message
     bob_result = bob_receive_message(original_message, received_message)
-    print(f"\nBob's Response to Tampered Message: {bob_result}")
+    print(f"\nBob's response to tampered Message: {bob_result}")
 
     # Eve attempts to tamper the message
     eve_attempts = eve_attempt(original_message, 100000)  # Maximum number of attempts for Eve
